@@ -1,0 +1,173 @@
+.accountt{
+    background: #E9EDF6;
+    padding: 10px;
+     width: 380px;
+     position: fixed;
+     top: 70px;
+     right: 20px;
+     border-radius: 30px;
+     text-align: center;
+     position: fixed;
+
+     .mail{
+        margin: 5px auto;
+     }
+     .exit{
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        font-size: 22px;
+        cursor: pointer;
+        padding: 0 7px;
+        border-radius: 50px;
+        transition: 0.3s;
+        &:hover{
+            background: #72727249;
+
+        }
+     }
+     .user{
+        width: 80px;
+        height: 80px;
+        background: #464545;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        margin-top: 20px;
+        
+        &:hover{
+            .edite{
+                background: rgb(189, 186, 186);
+                .edite-img{
+                    color: rgba(0, 0, 255, 0.611);
+                }
+            }
+        }
+        h2{
+            color: white;
+            font-size: 35px;
+            font-weight: 500;
+        }
+        .edite{
+            transition: 0.3s;
+            width: 25px;
+            height: 25px;
+            background: white;
+            position: absolute;
+            right: -5px;
+            top: 55px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .edite-img{
+                font-size: 16px;
+                transition: 0.3s;
+            }
+        }
+     }
+     .user-title{
+        font-weight: 400;
+        font-size: 25px;
+        margin: 5px 0;
+     }
+     .manage{
+        text-decoration: none;
+        color: rgb(37, 37, 239);
+        border: 1px solid #888;
+        padding: 10px 30px;
+        border-radius: 50px;
+        font-weight: 500;
+        // font-size: 16px;
+        margin-top: 10px;
+        transition: 0.3s;
+
+        &:hover{
+            background: #c7d7f3a9;
+        }
+
+    }
+    .btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        margin-top: 20px;
+        .left{
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px;
+            padding-right: 55px;
+            gap: 6px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #464545;
+
+            &:hover{
+                background: #e0e2e2;
+            }
+
+            .sircle{
+                 background: #E9EDF6;
+                 color: rgb(51, 51, 239);
+                 padding: 2px 6px ;
+                 border-radius: 50px;
+                //  font-size: 20px;
+            }
+        }
+        .right{
+             background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px 20px;
+            padding-right: 80px;
+            gap: 6px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #464545;
+
+             &:hover{
+                background: #e0e2e2;
+            }
+
+            .fa-solid{
+                font-size: 18px;
+            }
+        }
+    }
+    footer{
+        display: flex;
+        align-items: center; justify-content: center;
+        font-size: 12px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+
+        .dot{
+            width: 2px;
+            height: 2px;
+            border-radius: 5px;
+            background:#464545;
+            margin: 0 10px;
+        }
+        a{
+            cursor: pointer;
+            color: #464545;
+            text-decoration: none;
+        }
+    }
+
+}

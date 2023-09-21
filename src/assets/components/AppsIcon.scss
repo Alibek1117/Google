@@ -1,0 +1,30 @@
+.back-dots{
+    width: 40px ;
+    height: 40px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    
+    &:hover{
+        background: #504d4d45;
+    }
+    .dots{
+        width: 21px ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+
+
+    .dot{
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50px;
+
+    }
+}
+}

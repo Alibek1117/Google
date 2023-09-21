@@ -1,0 +1,208 @@
+  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600&display=swap');
+
+.home-page {
+  width: 100%;
+  height: 615px;
+//   background-image: url(../imgs/fon1.jpg);
+background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg);
+  background-position: center;
+  background-size: cover;
+  animation-name: bgImg;
+  animation-duration: 180s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: end;
+    padding: 1rem;
+
+    a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-family: arial, sans-serif;
+      font-size: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .back-account {
+      width: 2.5rem;
+      height: 2,5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3rem;
+
+      &:hover {
+        background: #504d4d45;
+      }
+      .account {
+        width: 2rem;
+        height: 2rem;
+        background: rgba(183, 177, 190, 0.509);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        color: aliceblue;
+        font-size: 1rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 500;
+    font-family: 'Kumbh Sans', sans-serif;
+
+  }
+  .searche {
+    max-width: 34rem;
+    width: 55%;
+    position: relative;
+  }
+  .search {
+    width: 100%;
+    margin-top: 3rem;
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 8px 1rem;
+    border-radius: 3rem;
+    position: relative;
+    left: -1rem;
+    .camera-icon {
+      width: 1.5rem;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .search-input {
+      width: 100%;
+      height: 2rem;
+      margin: 0 10px;
+      font-size: 1rem;
+      outline: none;
+      border: none;
+    }
+    .voise-icon {
+      width: 1.5rem;
+      cursor: pointer;
+    }
+    .fa-xmark {
+      font-size: 1.3rem;
+      color: #444;
+    }
+    .sugest {
+      width: 100%;
+      position: relative;
+      // display: block;
+    }
+  }
+}
+
+.shortCuts {
+  margin-top: 2rem;
+  .cards {
+    max-width: 31rem;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: wrap;
+
+    .card {
+      width: 6.2rem;
+      height: 6.2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      padding: 15px 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        background: #a5a4a45c;
+      }
+      .appImg {
+        width: 3rem;
+        height: 3rem;
+        background: #fff;
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .inner-app {
+          width: 2rem;
+          height: 2rem;
+          background: #56b2e4;
+          border-radius: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          font-weight: 700;
+          color: #232222;
+        }
+      }
+      .subtitle {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        margin-top: 10px;
+        color: white;
+      }
+    }
+    .hidden{
+        display: none;
+    }
+  }
+}
+
+
+
+
+@media only screen and (max-width:513px) {
+.shortCuts{
+    display: none;
+    
+}
+}
+
+
+@keyframes bgImg {
+    0%{
+        background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg);
+    }
+    50%{
+        background-image: url(https://i.pinimg.com/originals/33/b1/e0/33b1e01e371bc01d11439686f7700b19.jpg);
+    }
+    100%{
+        background-image: url(https://i.pinimg.com/originals/73/17/5d/73175dc9a0fd734a6b68c966617e1445.jpg);
+    }
+}
