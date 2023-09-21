@@ -45,6 +45,7 @@ const Home = () => {
   const [obj, setObj] = useState(null);
   const [shortModal, setShortModal] = useState(false);
   const [imgSearch, setSearchImg] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
   const [shortcutArr, setShortcutArr] = useState(() => {
     const storedArr = localStorage.getItem("shortcutArr");
     return storedArr
@@ -92,7 +93,7 @@ const Home = () => {
   const handleAcc = () => {
     setAccount(!account);
   };
-  const handleInput = (e) => {
+  const handleInput = () => {
     setSuggest(true);
   };
 
@@ -138,24 +139,31 @@ const Home = () => {
         <h1 className="title">Google</h1>
         <div className="searche">
           <div className="search">
-            {result.length <= 0 ? (
-              <img className="search-icon" src={search} alt="search" />
-            ) : (
-              <div className="clear">
-                <i class="fa-solid fa-xmark"></i>
-              </div>
-            )}
-            <form className="search-input">
+            <img className="search-icon" src={search} alt="search" />
+            <form
+              className="search-input"
+              onSubmit={(e) => {
+                e.stopPropagation();
+              }}
+            >
               <input
                 onChange={(e) => {
+                  // e.stopPropagation();
                   setResult(e.target.value);
+                  console.log(e);
+                  //  handleInput()
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
                   handleInput();
                 }}
                 className="search-input"
                 type="text"
+                // value={searchValue}
                 placeholder="Search Google or type a URL"
               />
             </form>
+            {result.length >0 && (<i className="fa-solid fa-xmark"></i>)}
             <img className="voise-icon" src={voise} alt="voise" />
             <img
               className="camera-icon"
@@ -169,7 +177,13 @@ const Home = () => {
           </div>
           {suggest && (
             <div className="suggest">
-              {<SearchSug result={result} setSuggest={setSuggest} />}
+              {
+                <SearchSug
+                  result={result}
+                  setSuggest={setSuggest}
+                  setSearchValue={setSearchValue}
+                />
+              }
             </div>
           )}
         </div>

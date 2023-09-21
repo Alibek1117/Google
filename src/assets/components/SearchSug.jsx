@@ -1,6 +1,7 @@
 import React from "react";
 import "./SearchSug.scss";
-const SearchSug = ({ result, setSuggest }) => {
+const SearchSug = ({ result, setSuggest, setSearchValue }) => {
+  console.log(result);
   let sugg = [
     "java script asoslari",
     "react JS",
@@ -16,13 +17,23 @@ const SearchSug = ({ result, setSuggest }) => {
     sugg.filter((item) => {
       return item.includes(result);
     });
-    console.log(filtered);
+  console.log(filtered);
+  filtered.find((item, i) => {
+    if (sugg[i] === item) {
+      console.log("true");
+    }
+  });
+  const handleSugs = (e) => {
+    const inputVal = e.target.innerText;
+    setSearchValue(inputVal)
+    // console.log(inputVal);
+  };
   return (
-    <div className="suggs">
+    <div className="suggs" onClick={handleSugs}>
       {filtered.length > 0
         ? filtered.map((item, index) => (
             <div className="sug" key={index}>
-              <i class="fa-regular fa-clock"></i>
+              <i className="fa-regular fa-clock"></i>
               {item}
             </div>
           ))

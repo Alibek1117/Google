@@ -1,10 +1,10 @@
-  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;600&display=swap");
 
 .home-page {
-  width: 100%;
-  height: 615px;
-//   background-image: url(../imgs/fon1.jpg);
-background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg);
+  width: 100vw;
+  height: 100vh;
+  //   background-image: url(../imgs/fon1.jpg);
+  background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg);
   background-position: center;
   background-size: cover;
   animation-name: bgImg;
@@ -33,7 +33,7 @@ background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc50075
     }
     .back-account {
       width: 2.5rem;
-      height: 2,5rem;
+      height: 2, 5rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -73,13 +73,21 @@ background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc50075
     color: #fff;
     font-size: 6rem;
     font-weight: 500;
-    font-family: 'Kumbh Sans', sans-serif;
-
+    font-family: "Kumbh Sans", sans-serif;
   }
   .searche {
     max-width: 34rem;
     width: 55%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+  }
+  .suggest {
+    // width: 100%;
+    border: 1px solid green;
   }
   .search {
     width: 100%;
@@ -88,10 +96,11 @@ background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc50075
     display: flex;
     align-items: center;
     background: #fff;
-    padding: 8px 1rem;
+    padding: 8px 15px;
     border-radius: 3rem;
     position: relative;
-    left: -1rem;
+    z-index: 100;
+    // left: -1rem;
     .camera-icon {
       width: 1.5rem;
       margin-left: 10px;
@@ -100,10 +109,11 @@ background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc50075
     .search-input {
       width: 100%;
       height: 2rem;
-      margin: 0 10px;
+      margin: 0 7px;
       font-size: 1rem;
       outline: none;
       border: none;
+      z-index: 9999;
     }
     .voise-icon {
       width: 1.5rem;
@@ -111,7 +121,11 @@ background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc50075
     }
     .fa-xmark {
       font-size: 1.3rem;
-      color: #444;
+      color: #3f92c3;
+      margin-right: 8px;
+      margin-top: 5px;
+      cursor: pointer;
+      
     }
     .sugest {
       width: 100%;
@@ -133,8 +147,8 @@ background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc50075
     flex-wrap: wrap;
 
     .card {
-      width: 6.2rem;
-      height: 6.2rem;
+      width: 7.2rem;
+      height: 7.2rem;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -178,31 +192,35 @@ background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc50075
         color: white;
       }
     }
-    .hidden{
-        display: none;
+    .hidden {
+      display: none;
     }
   }
 }
 
-
-
-
-@media only screen and (max-width:513px) {
-.shortCuts{
+@media only screen and (max-width: 513px) {
+  .shortCuts {
     display: none;
-    
+  }
 }
-}
-
 
 @keyframes bgImg {
-    0%{
-        background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg);
-    }
-    50%{
-        background-image: url(https://i.pinimg.com/originals/33/b1/e0/33b1e01e371bc01d11439686f7700b19.jpg);
-    }
-    100%{
-        background-image: url(https://i.pinimg.com/originals/73/17/5d/73175dc9a0fd734a6b68c966617e1445.jpg);
-    }
+  0% {
+    background-image: url(https://wallpapers.com/images/hd/water-reflection-nature-scenery-qmtvhbi2s7ipm4rp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background-image: url(https://wallpapercrafter.com/desktop2/703988-bridge-forest-suspension-bridge-lynn-canyon-lynn.jpg);
+    background-position: center 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url(https://i.pinimg.com/originals/73/17/5d/73175dc9a0fd734a6b68c966617e1445.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
