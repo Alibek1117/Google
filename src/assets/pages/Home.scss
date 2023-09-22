@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   //   background-image: url(../imgs/fon1.jpg);
-  background-image: url(https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg);
+  background-image: url(https://wallpapers.com/images/hd/water-reflection-nature-scenery-qmtvhbi2s7ipm4rp.jpg);
   background-position: center;
   background-size: cover;
   animation-name: bgImg;
@@ -106,7 +106,12 @@
       margin-left: 10px;
       cursor: pointer;
     }
+    .crosBtn{
+      border: none;
+      background: #fff;
+    }
     .search-input {
+      display: flex;
       width: 100%;
       height: 2rem;
       margin: 0 7px;
@@ -114,7 +119,9 @@
       outline: none;
       border: none;
       z-index: 9999;
+      // display: block;
     }
+   
     .voise-icon {
       width: 1.5rem;
       cursor: pointer;
@@ -125,6 +132,7 @@
       margin-right: 8px;
       margin-top: 5px;
       cursor: pointer;
+      // display: block;
       
     }
     .sugest {

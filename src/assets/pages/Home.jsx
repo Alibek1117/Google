@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import appsIcon from "../imgs/Icons/apps.png";
+import {Form} from "antd"
 import insta from "../imgs/Icons/insta.png";
 import search from "../imgs/Icons/icon_search.svg";
 import camera from "../imgs/Icons/lens_icon.svg";
@@ -48,6 +48,7 @@ const Home = () => {
   const [searchValue, setSearchValue] = useState("");
   const [shortcutArr, setShortcutArr] = useState(() => {
     const storedArr = localStorage.getItem("shortcutArr");
+
     return storedArr
       ? JSON.parse(storedArr)
       : [
@@ -104,6 +105,9 @@ const Home = () => {
     setSearchImg(true);
   };
 
+  
+   
+
   // console.log(newArr);
   return (
     <div className="home-page" onClick={(e) => handleHome()}>
@@ -145,25 +149,34 @@ const Home = () => {
               onSubmit={(e) => {
                 e.stopPropagation();
               }}
+              // initialValues={{
+              //   searchInn:searchValue
+              // }}
             >
-              <input
-                onChange={(e) => {
-                  // e.stopPropagation();
-                  setResult(e.target.value);
-                  console.log(e);
-                  //  handleInput()
-                }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleInput();
-                }}
-                className="search-input"
-                type="text"
-                // value={searchValue}
-                placeholder="Search Google or type a URL"
-              />
+              
+                <input
+                  onChange={(e) => {
+                    // e.stopPropagation();
+                    setResult(e.target.value);
+                    console.log(e);
+                    //  handleInput()
+                  }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleInput();
+                  }}
+                  className="search-input"
+                  type="text"
+                  // value={searchValue}
+                  placeholder="Search Google or type a URL"
+                />
+              {result.length > 0 && (
+                <button className="crosBtn" type="reset">
+                  <i className="fa-solid fa-xmark"></i>
+                </button>
+              )}
+              
             </form>
-            {result.length >0 && (<i className="fa-solid fa-xmark"></i>)}
             <img className="voise-icon" src={voise} alt="voise" />
             <img
               className="camera-icon"
